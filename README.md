@@ -11,4 +11,4 @@
 * Some aspects of error checking are yet to be implemented
 * Live Demo http://www.markjurkiewicz.com/CalculatorProject/
 
-![screenschot of calc](/img/calc.png?raw=true "screenshot of calc")
+![screenschot of calc](/images/calc.png?raw=true "screenshot of calc")
