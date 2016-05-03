@@ -4,9 +4,8 @@
 // Global Variables
 input_storage = [''];
 input_index = 0;
-//I press 2 + 1
-// input_storage -> ['21', '+', '11']
-$(function () {    //docready function shortcutted to $(function (){});
+
+$(function () {    //docready
     $('button.number_button').on('click', function () {
         console.log('I clicked on a number', $(this).text());
         number_input($(this).text());
@@ -139,14 +138,14 @@ function clear() {
         var result;
         for (var i = 0; i < input_storage.length; i++) {//iterate through the input storage array
 
-            if (!isNaN(input_storage[i]) && num1 == null) {//if the index value in the input_storage array is a number// is num1 null?
+            if (!isNaN(input_storage[i]) && num1 == null) {
                 console.log('first' + !isNaN(input_storage[i]));//
-                num1 = input_storage[i];//if yes, store the number into num1
+                num1 = input_storage[i];
 
-            } else if (!isNaN(input_storage[i]) && num2 == null) {//if not, is num2 null?
+            } else if (!isNaN(input_storage[i]) && num2 == null) {
                 console.log('second' + !isNaN(input_storage[i]));
-                num2 = input_storage[i];//if yes, store the number into num2
-                result = jurkMath(num1, num2, operator);//if yes, call jurk_math
+                num2 = input_storage[i];
+                result = jurkMath(num1, num2, operator);
                 input_storage[i] = result;
                 input_storage.splice(0, 2);
                 i = -1;
@@ -157,7 +156,7 @@ function clear() {
                 (isNaN(input_storage[i])); //if the index value in input_storage is an operator
                 console.log('third' + parseInt(input_storage[i]));
                 operator = input_storage[i];//store the operator into operator
-            }// do I have 2 numbers and an operator?
+            }
         }
         refreshDisplay();
 
